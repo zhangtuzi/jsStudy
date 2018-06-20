@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>正方体</title>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <style media="screen">
+    #transDiv{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border:1px solid #ccc;
+      margin:200px;
+      transform-style:preserve-3d;
+      -webkit-transform: rotate3d(0.5,0.5,0.5,90deg);
+      /*perspective: 500;
+      -webkit-perspective:500;*/
+
+    }
+    #transDiv div{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+    }
+    .top{
+      background: #fc77dd;
+      transform:translateY(-100px) rotateX(-90deg);
+      -webkit-transform: translateY(-100px) rotateX(-90deg);
+    }
+    .bottom{
+      background: #ccc;
+      transform: translateY(100px) rotateX(-90deg);
+      -webkit-transform: translateY(100px) rotateX(-90deg);
+    }
+    .left{
+      background: #5eb96a;
+      transform: translateX(-100px) rotateX(-90deg);
+      -webkit-transform: translateX(-100px) rotateY(-90deg);
+    }
+    .right{
+      background: #ff7744;
+      transform: translateX(100px) rotateX(90deg);
+      -webkit-transform: translateX(100px) rotateY(90deg);
+    }
+    .face{
+      background: #4a66fa;
+      transform: translateZ(100px);
+      -webkit-transform: translateZ(100px);
+    }
+    .back{
+      background: #ecd7a0;
+      transform: translateZ(-100px);
+      -webkit-transform: translateZ(-100px);
+    }
+    </style>
+  </head>
+  <body>
+    <div id="transDiv">
+      <div class="top">上</div>
+      <div class="bottom">下</div>
+      <div class="left">左</div>
+      <div class="right">右</div>
+      <div class="face">正面</div>
+      <div class="back">反面</div>
+    </div>
+    <script type="text/javascript">
+    var i=0;
+    xuanzuan();
+    function xuanzuan(){
+      i++;
+      b=i%360;
+      if(b<360){
+        $('#transDiv').css('-webkit-transform','rotate3d(0.5,0.5,0.5,'+i+'deg)');
+      }else{
+        // $('#transDiv').css('-webkit-transform','rotate3d(0.5,0.5,0.5,-'+i+'deg)');
+      }
+      requestAnimationFrame(xuanzuan);
+    }
+    // setInterval(function(){
+    //
+    // },20)
+
+    </script>
+  </body>
+</html>

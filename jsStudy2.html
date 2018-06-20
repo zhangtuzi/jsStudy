@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jsStudy2</title>
+  </head>
+  <body>
+
+    <ul id="testUl">
+      <li>1234567890</li>
+      <li>内容2</li>
+      <li>内容3</li>
+    </ul>
+
+
+
+    <script type="text/javascript">
+      function Rabbit(Per){
+        this.name=Per.name;
+        this.age=Per.age;
+        this.sex=Per.sex;
+      }
+      Rabbit.prototype={
+        sayHello:function(){
+          alert(this.name+'hello');
+        }
+      }
+      var lisi=new Rabbit({
+        name:'lisi',
+        age:'23',
+        sex:'boy'
+      });
+      // console.log(Rabbit.prototype.sayHello)
+      // lisi.sayHello();
+
+
+    var testUl1=document.getElementById('testUl');
+    var testLi1=testUl1.childNodes;
+    console.log(testLi1[1].innerHTML+'=======>1')
+    var testLi2=[];
+    for(var item in testLi1){
+      if(testLi1[item].nodeType=='1'){
+        testLi2.push(testLi1[item]);
+      }
+      if(testLi1[item].innerText=='内容2'){
+        console.log(this)
+        testLi1[item].previousSibling.previousSibling.style.backgroundColor='red';
+      }
+    }
+
+    console.log(testLi2)
+
+
+    // var cookies=document.cookie;
+    // var cookieArray=cookies.split(';');
+    // var cookieA=[];
+    // for(var i=0;i<cookieArray.length;i++){
+    //   var cookieB=cookieArray[i].split('=');
+    //   console.log('cookieB.name='+cookieB[0])
+    //   cookieA.push({''+cookieB[0]+'':cookieB[1]});
+    //   // cookieA.push({''+cookieB[0]+'':''+cookieB[1]+''});
+    // }
+    // console.log(cookieA)
+
+    var str='name=zhangsan;age=56';
+    var strA=str.split(';');
+    var strArray=[];
+    for(var i=0;i<strA.length;i++){
+      var test= strA[i].split('=');
+      console.log(test);
+      var testO={};
+      testO.test[0]=test[1];
+      // strArray.push({
+      //   ''+test[0]+'':''+test[1]+''
+      // })
+    }
+    // console.log('strArray='+strArray)
+    </script>
+  </body>
+</html>

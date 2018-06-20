@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>react学习</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="rabbit"></div>
+    <div id="rabbit1"></div>
+    <div id="rabbit2"></div>
+    <div id="rabbit3"></div>
+    <div id="rabbit4"></div>
+    <div id="rabbit5"></div>
+    <script type="text/babel">
+        ReactDOM.render(
+          <p>我是测试语句</p>,
+          document.getElementById('rabbit')
+        )
+
+        var test1='我是变量测试';
+        ReactDOM.render(
+          <div>{test1}</div>,
+          document.getElementById('rabbit1')
+        )
+
+        var arr1= ['我是数组测试1','我是数组测试2','我是数组测试3'];
+        ReactDOM.render(
+          <div>
+            {
+              arr1.map(function(item,index){
+                return <p key={index}>{item}</p>
+              })
+            }
+          </div>,
+          document.getElementById('rabbit2')
+        )
+
+        var arr2 = [
+          <p key="1">我是测试数组第二种形式数据1</p>,
+          <p key="2">我是测试数组第二种形式数据2</p>,
+        ];
+        ReactDOM.render(
+          <div>{arr2}</div>,
+          document.getElementById('rabbit3')
+        )
+
+        var Hello=React.createClass({
+          render:function(){
+            return <h1>{this.props.message}</h1>
+          }
+        })
+
+      ReactDOM.render(
+        <Hello message="兔子欢迎你" />,
+        document.getElementById('rabbit4')
+      )
+
+      var ListMessage=React.createClass({
+        render: function() {
+          return (
+            <ul>
+              {
+                React.Children.map(this.props.children,function(child){
+                  return <li>{child}</li>;
+                })
+              }
+            </ul>
+          );
+        }
+      });
+      // React.createClass({
+      //   render: function() {
+      //     return (
+      //       <ol>
+      //         {
+      //           React.Children.map(this.props.children, function (child) {
+      //             return <li>{child}</li>;
+      //           })
+      //         }
+      //       </ol>
+      //     );
+      //   }
+      // });
+      ReactDOM.render(
+        <ListMessage>
+          <span>子类信息1</span>
+          <span>子类信息2</span>
+          <span>子类信息3</span>
+        </ListMessage>,
+        document.getElementById('rabbit5')
+      )
+    </script>
+  </body>
+</html>

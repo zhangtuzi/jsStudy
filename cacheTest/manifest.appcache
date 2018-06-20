@@ -1,0 +1,13 @@
+CACHE MANIFEST
+
+CACHE:
+index.html
+css/reset.css
+css/zh_zajindan.css
+images/*
+js/*
+
+NETWORK:
+*
+
+FALLBACK:

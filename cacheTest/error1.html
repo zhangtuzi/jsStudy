@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport"   id='viewport' content="width=device-width,initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>新春嘉年华</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/zh_zajindan.css">
+    <script type="text/javascript" src="js/public640.js"></script>
+  </head>
+  <body class="warpBody">
+    <!-- 页面主体部分开始 -->
+    <div class="warpBody">
+      <div class="goldDiv">
+        <img src="images/header-logo.png" class="goldIcon fl">
+      </div>
+      <div class="hdgzBtn">
+          <div class="marginT5">活动规则</div>
+          <img src="images/new-jiantou.png" class="xiaIcon fl">
+      </div>
+      <img src="images/header-title.png" class="titPic">
+
+      <div class="header-song1Gliuliang">
+      	 砸金蛋送1GB国内流量<span class="SLL-b">连赠6个月</span>
+      </div>
+      <div class="date-huodong">
+        <div class="data_hr"></div>
+        <p>2017.12.29-2018.03.31</p>
+      </div>
+      <!-- 彩蛋区开始 -->
+      <div class="caidanWarpDiv">
+          <img src="images/chuizi.png" class="chuiziIcon chuiziStart jump">
+          <img src="images/dan-left01.png" class="caidanL0 caidanL caidanMove">
+          <img src="images/dan-right01.png" class="caidanR0 caidanR caidanMove">
+          <img src="images/dan-middle03.png" class="caidanC0 caidanC caidanMove">
+      </div>
+      <!-- 彩蛋区结束 -->
+      <div class="yizhongjiangDiv">
+        <p class="colorfbe430">您已获得1GB国内流量</p>
+        <p class="colorffebce">活动期间，每个用户只能中奖1次</p>
+      </div>
+      <!-- 中奖公示区开始 -->
+      <div class="zhongjiangbobaoWarp">
+        <div class="zhongjiangbobaoDiv fl">
+          <div class="zhongjiangbobaoBanner">
+            <ul class="zhongjiangUl">
+              <li>
+                <span class="zhongjiangPhone fl">185 **** 0866</span>
+                <span class="zhongjiangjiangpin fr">1GB国内流量（连赠1个月）</span>
+              </li>
+              <li>
+                <span class="zhongjiangPhone fl">185 **** 0866</span>
+                <span class="zhongjiangjiangpin fr">1GB国内流量（连赠2个月）</span>
+              </li>
+              <li>
+                <span class="zhongjiangPhone fl">185 **** 0866</span>
+                <span class="zhongjiangjiangpin fr">1GB国内流量（连赠3个月）</span>
+              </li>
+              <li>
+                <span class="zhongjiangPhone fl">185 **** 0866</span>
+                <span class="zhongjiangjiangpin fr">1GB国内流量（连赠4个月）</span>
+              </li>
+              <li>
+                <span class="zhongjiangPhone fl">185 **** 0866</span>
+                <span class="zhongjiangjiangpin fr">1GB国内流量（连赠5个月）</span>
+              </li>
+              <li>
+                <span class="zhongjiangPhone fl">185 **** 0866</span>
+                <span class="zhongjiangjiangpin fr">1GB国内流量（连赠6个月）</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 中奖公示区结束 -->
+      <div class="moreBtn">发现更多活动</div>
+    </div>
+    <!-- 页面主体部分结束 -->
+    <div class="mc"></div>
+    <div class="hdgzMc"></div>
+    <!-- 活动规则弹层 -->
+    <div class="hdgzTc">
+      <img src="images/huodongguize-info.png" class="hdgzBg">
+      <img src="images/closebtn1.png" class="hdgzClose">
+      <div class="hdgzHeader">活动规则</div>
+      <div class="hdgzContent">
+        <div class="hdgzHideDiv">
+          <ul class="hdgzUl">
+            <li>
+              <span class="hdgzSpan">
+                1、目标用户：在2017年12月25日10:00之前正常在网使用的工行e卡老用户，以及在2017年12月1日0:00—2018年3月1日0:00期间，由其他套餐转为工行e卡套餐的用户；
+              </span>
+            </li>
+            <li>
+              <span class="hdgzSpan">
+                2、在2017年12月29日10:00—2018年4月1日0:00期间，凡是通过砸金蛋获奖的用户，自中奖次月起连续6个月每月赠送1GB国内流量；
+              </span>
+            </li>
+            <li>
+              <span class="hdgzSpan">
+                3、每人每月有一次砸金蛋的机会，但活动期间最多只能有一次中奖机会，如本月中奖，则次月及以后将不再有砸金蛋机会；
+              </span>
+            </li>
+            <li>
+              <span class="hdgzSpan">
+                4、赠送流量将于每月10日（含）前到账，当月有效，不可结转；
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+      var chuiziJump=setInterval(chuiziJumpFun,700);
+
+      //活动规则显示隐藏
+      $('.hdgzBtn').click(function(){
+        var win_H=$(window).height();
+        $('.warpBody').css({'height':win_H,'overflow':'hidden'});
+        $('.hdgzMc,.hdgzTc').show();
+      })
+      $('.hdgzClose').click(function(){
+        $('.hdgzMc,.hdgzTc').hide();
+        $('.warpBody').css({'height':'auto','overflow':'auto'});
+      })
+
+
+      //锤子跳动
+      var jump = true;
+      function chuiziJumpFun(){
+        if(jump){
+            jump = false;
+            $('.chuiziIcon').removeClass('jump');
+        }else{
+          jump = true;
+          $('.chuiziIcon').addClass('jump');
+        }
+      }
+
+
+      //禁止页面滚动
+      function JinzMove(){
+        $("body").bind("touchmove",function(e){
+          e.preventDefault();
+        });
+      }
+
+      //中奖公示部分滚动
+      var zhongjiangShowI=0;
+      var zhongjiangUlH=$('.zhongjiangUl').height();
+      $('.zhongjiangUl').append($('.zhongjiangUl').html());
+      setInterval(function(){
+        var zhongjiangUlTop=$('.zhongjiangUl').css('margin-top');
+        zhongjiangUlTop=parseInt(zhongjiangUlTop.substring(0,zhongjiangUlTop.length-2));
+        if(zhongjiangUlTop+zhongjiangUlH>1){
+          zhongjiangUlTop-=1;
+        }else{
+          zhongjiangUlTop=0;
+        }
+        $('.zhongjiangUl').css('margin-top',zhongjiangUlTop);
+      },40)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>messageceshi</title>
+  </head>
+  <body>
+    <a href="messageL.html" id="boy" style="display:block;width:100px;
+    height:20px;font-size:20px;background:#ccc;color:#eee;">男生</a target="_blank">
+    <script type="text/javascript">
+    var message = '';
+
+    document.querySelector("#boy").onclick = function() {
+        message = '我是男生，帅气的男生！';
+    };
+    // document.querySelector("#girl").onclick = function() {
+    //     message = '我是女生，漂亮的女生！';
+    // };
+
+
+    window.addEventListener('message', function(e) {
+        var interval;
+        // 检测来源
+        if (e.origin == 'http://jsstudy.www.rabbitzhl.com/')
+            switch (e.data) {
+                case 'ready':
+                    // e.source 为发送的 window 对象
+                    interval = setTimeout(function(win) {
+                        win.postMessage(message,'http://jsstudy.www.rabbitzhl.com');
+                    }, 2000, e.source);
+                    break;
+
+                case 'closed':
+                    clearInterval(interval);
+                    break;
+        }
+     }, false);
+    </script>
+  </body>
+</html>

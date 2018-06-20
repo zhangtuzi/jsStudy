@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>react学习2</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+      <div id="rabbit1"></div>
+      <div id="rabbit2"></div>
+      <div id="rabbit3"></div>
+      <div id="rabbit4"></div>
+      <div id="rabbit5"></div>
+      <div id="rabbit6"></div>
+      <script type="text/babel">
+        ReactDOM.render(
+          <p>我是测试语句</p>,
+          document.getElementById('rabbit1')
+        )
+
+        var arr1 = [
+          <p>我是数组测试语句1</p>,
+          <p>我是数组测试语句2</p>
+        ];
+        ReactDOM.render(
+          <div>{arr1}</div>,
+          document.getElementById('rabbit2')
+        )
+
+        var arr1=['张三','李四','王五'];
+        ReactDOM.render(
+          <div>
+          {
+            arr1.map(function(item,index){
+              return <div key={index}>{item}</div>
+            })
+          }
+          </div>,
+          document.getElementById('rabbit3')
+        );
+
+        var arr2 = ['张三','李四','王五'];
+        ReactDOM.render(
+          <div>
+            {
+              arr2.map(function(item,index){
+                return <p key={index}>您好，{item}</p>
+              })
+            }
+          </div>,
+          document.getElementById('rabbit4')
+        )
+
+
+        var HelloP=React.createClass({
+          render: function(){
+            return <p>早上好，{this.props.name}<p>;
+          }
+        });
+        ReactDOM.render(
+          <HelloP name="jaaj" />,
+          document.getElementById('rabbit6')
+        )
+
+
+      </script>
+  </body>
+</html>

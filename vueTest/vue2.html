@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue2测试</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{title}}</p>
+      <component-a title="ceshi"></component-a>
+      <ul>
+        <component-prolist v-for="test in proList"v-bind:key="test.id" v-bind:test="test"></component-prolist>
+      </ul>
+
+
+    </div>
+
+    <script type="text/javascript">
+      var listTem = Vue.extend({
+          temple:'我是一个扩展组件'
+      })
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          title:'测试',
+          proList:[
+            {
+              id:'01',
+              title:'张三',
+              age: 20
+            },
+            {
+              id:'02',
+              title:'李四',
+              age: 24
+            }
+          ]
+        },
+        components: {
+          'component-a':{
+            props:['title'],
+            data: function (){
+              return {
+                title1:'112'
+              }
+
+            },
+            template:'<div><p>{{title}}</p><p>{{title1}}</p></div>'
+          },
+          'component-prolist':{
+            props:['test'],
+            template:`<li><p>用户id:{{test.id}}</p>
+            <p>用户标题:{{test.title}}</p><p>用户年龄:{{test.age}}</p>
+            <children>
+              <p slot="first">我是第一个插槽内容</p>
+              <p>我是插槽内容</p>
+              <p>我是插槽内容</p>
+              <p>我是插槽内容</p>
+              <p slot="last">我是最后一个插槽内容</p>
+            </children>
+            </li>`
+          },
+          'test11':{
+            props:['test'],
+            template:`<li><p>用户id:{{test.id}}</p>
+            <p>用户标题:{{test.title}}</p><p>用户年龄:{{test.age}}</p></li>`
+          },
+          'children':{
+            template:`<div><slot name="first"></slot>
+            <p>我是children组件内容</p>
+            <slot></slot>
+            <p>我是children组件内容</p>
+            <slot name="last">12345</slot>
+            </div>`
+          }
+        }
+      })
+
+
+      function changeFrameHeight(){
+          var ifm= document.getElementById("iframe");
+          var height1=ifm.height;
+          var changeS=setInterval(function(){
+            ifm.height=document.documentElement.clientHeight;
+            if(ifm.height && ifm.height )
+            console.log(ifm);
+          },10)
+
+
+      }
+    </script>
+  </body>
+</html>

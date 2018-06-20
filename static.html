@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手机适配测试</title>
+</head>
+<body>
+    <input type="button" value="刷新" onclick="location.reload();" style="width:100px;height:200px;background:#ccc;">
+    <script>
+        //  var _self =  this ;
+        // _self.width = 640;
+        // _self.fontSize = 100; 
+        // _self.widthProportion =  function (){ var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.5?0.5:p;};
+        // alert(_self.widthProportion());
+        // _self.changePage =  function (){
+        // document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+        // }
+        
+        // _self.changePage();
+        // window.addEventListener('resize', function (){_self.changePage();}, false );
+        // var htmlSize = document.querySelector('html').attributes.style.value;
+        // var fontSizeInit = htmlSize.substring(10,12);
+        // alert('fontSizeInit='+fontSizeInit+'</br>_self.widthProportion()*_self.fontSize='+_self.widthProportion()*_self.fontSize);
+        // if(fontSizeInit == _self.widthProportion()*_self.fontSize ){
+        //     alert(1);
+        // }else{
+        //     alert(2);
+        // }
+        window.onload=function(){
+            var htmlSize = document.getElementsByTagName("html")[0].style.fontSize;
+            // var fontSizeInit = htmlSize.substring(10,12);
+            alert(htmlSize);
+
+        }
+    </script>
+</body>
+</html>

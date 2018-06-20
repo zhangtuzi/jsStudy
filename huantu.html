@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>半圆形进度条</title>
+    <style media="screen">
+      #canvas{
+        transform: rotate(136deg);
+        -webkit-transform: rotate(136deg);
+        -ms-transform: rotate(136deg);
+        -o-transform: rotate(136deg);
+        -moz-transform: rotate(136deg);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script type="text/javascript">
+      var huantu = document.getElementById('canvas');
+      var huantuCanvas = huantu.getContext('2d');
+      // 底色圈
+      var circleObj = {
+        'bgColor': '#ffd7c7',
+        'endRangle':1.5
+      }
+      var baifenNumber = 0.3;
+      // 进度条
+      var circleObj1 = {
+        'bgColor': '#ff7744',
+        'endRangle':1.5*baifenNumber
+      }
+      circle (circleObj);
+      circle (circleObj1);
+      // 画圈方法
+      function circle (circleObj){
+        huantuCanvas.beginPath();
+        huantuCanvas.lineWidth  = 15;
+        huantuCanvas.strokeStyle = circleObj.bgColor;
+        huantuCanvas.lineCap = "round"
+        huantuCanvas.arc(150,150,50,0,circleObj.endRangle*Math.PI);
+        huantuCanvas.stroke();
+      }
+    </script>
+  </body>
+</html>

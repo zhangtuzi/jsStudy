@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爆炸效果</title>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <style>
+        body{
+            background:#cdeabd;
+        }
+        .sp{
+            position:fixed;
+            bottom:0;
+            left:50%;
+            width:20px;
+            height:20px;
+        }
+        .spM{
+            animation: xuehuaM 8s infinite;
+            -webkit-animation: xuehuaM 8s infinite;
+        }
+        /*@keyFrames xuehuaM{
+            0%{top:0}
+            80%{top:14rem}
+            100%{top:5rem;opacity:0;}
+        }*/
+    </style>
+</head>
+<body>
+
+    <script>
+        for(var i=0;i<30;i++){
+            $('body').append('<img src="images/xuehua.png" class="sp">');
+        }
+        setTimeout(() => {
+            $('.sp').each(function(){
+                var _this = $(this);
+                var leftM=Math.random()*95;
+                var top = Math.random()*15;
+                $(this).animate({
+                    top:top,
+                    left:''+leftM+'%'
+                },230,function(){
+                    _this.addClass('spM');
+                })
+            })
+        }, 2000);
+
+    </script>
+</body>
+</html>

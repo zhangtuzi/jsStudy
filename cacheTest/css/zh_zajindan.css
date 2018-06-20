@@ -1,0 +1,589 @@
+/*禁止手机端点击时出现灰色背景*/
+*{
+		 -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; tap-highlight-color:rgba(0,0,0,0); tap-highlight-color:transparent;
+	}
+/*砸金蛋活动页样式*/
+.warpBody{
+  position: relative;
+  margin:0 auto;
+  width: 6.4rem;
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  background-color: #291D5F;
+  background-image: url(../images/new-body-bg_01.png);
+  background-repeat: no-repeat;
+  background-size:6.4rem auto;
+}
+.goldDiv{
+  position: absolute;
+  top: 0.18rem;
+  left: 0.18rem;
+  width: 1.55rem;
+  height: 0.6rem;
+}
+.goldIcon{
+  height: 0.53rem;
+}
+.goldNum{
+  margin-left: 0.1rem;
+  width: 0.6rem;
+  text-align: center;
+  font-size: 0.3rem;
+  color: #fff;
+  line-height: 0.6rem;
+}
+.hdgzBtn{
+  position: absolute;
+  top: 0;
+  right: 0.45rem;
+  width: 0.6rem;
+  height: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.22rem;
+  color: #1e2336;
+  line-height: 0.3rem;
+  border-radius: 0 0 0.3rem 0.3rem;
+  background: #F7DE50;
+}
+.marginT5{
+  margin-top: 0.05rem;
+}
+.xiaIcon{
+  margin-top: 0.05rem;
+  margin-left: 0.23rem;
+  width: 0.14rem;
+  height: 0.08rem;
+  display: inline-block;
+}
+.titPic{
+  margin: 0 auto;
+  margin-top: 0.75rem;
+  height: 1.52rem;
+	display: block;
+}
+.header-song1Gliuliang{
+	width: 5.28rem;
+	height: 0.47rem;
+	margin:0 auto;
+	margin-top: 0.1rem;
+	font-size: 0.29rem;
+	color: #FFFFFF;
+	line-height: 0.47rem;
+	text-align: center;
+	background: #7634AA;
+	border-radius: 0.5rem;
+	line-height: 0;
+}
+
+.SLL-b{
+	display: inline-block;
+	margin-left: 0.15rem;
+	font-size: 0.29rem;
+	line-height: 0.47rem;
+	text-align: center;
+	color: #f7de50;
+}
+
+.date-huodong{
+	position: relative;
+	padding-top: 0.1rem;
+	width: 3.5rem;
+	height: 0.3rem;
+	line-height: 0.3rem;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0.24rem;
+}
+.data_hr{
+	position: absolute;
+	top: 0.25rem;
+	width: 100%;
+	height: 1px;
+	background: #1e2336;
+}
+.date-huodong p{
+	position: relative;
+	display: inline-block;
+	height: 0.3rem;
+	padding: 0 0.15rem;
+	background: #845fbc;
+}
+.zadanTip{
+  margin-top: -0.75rem;
+  height: 0.24rem;
+  font-size: 0.24rem;
+  line-height: 0.24rem;
+  color: #fbddd5;
+}
+.caidanWarpDiv{
+  position: relative;
+  margin: 0.5rem auto 0;
+  width: 5.45rem;
+  height: 4.05rem;
+}
+.chuiziStart{
+  position: absolute;
+  top: -0.6rem;
+  right: -0.15rem;
+  width: 1.17rem;
+  height: 1.19rem;
+  z-index: 20;
+	opacity: 1;
+	-webkit-transform-origin: right bottom;
+  transform-origin: right bottom;
+  transform: rotate(0deg);
+	/*transition: all .2s linear;
+	-webkit-transition: all .2s linear;*/
+}
+
+.jump{
+	/*opacity: 0.7;*/
+	transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);
+}
+
+.caidanL0{
+  position: absolute;
+  bottom: 0.85rem;
+  left: 0rem;
+  width: 2.1rem;
+  height: 2.45rem;
+  z-index: 1;
+}
+.caidanC0{
+  position: absolute;
+  bottom: 0.1rem;
+  left: 50%;
+  margin-left: -1.46rem;
+  width: 2.92rem;
+  height: 3.6rem;
+  z-index: 10;
+}
+.caidanR0{
+  position: absolute;
+  bottom: 0.85rem;
+  right: 0;
+  width: 1.95rem;
+  height: 2.45rem;
+  z-index: 1;
+}
+.caidanMove{
+	transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+	-webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.stageIcon{
+  position: absolute;
+  left: -0.2rem;
+  bottom: 0;
+  width: 5.75rem;
+  height: 1.75rem;
+}
+.zadanjihuiDiv,.yizhongjiangDiv{
+  width: 3.89rem;
+  height: 0.6rem;
+  margin:0 auto;
+  background: #3F1479;
+  border-radius: 0.3rem;
+  font-size: 0.27rem;
+  color: #ffebce;
+  text-align: center;
+  padding: 0 0.1rem;
+  margin-top: 0.3rem;
+}
+.yizhongjiangDiv{
+	height: 0.66rem;
+}
+.zadanjihuiDiv p{
+	line-height: 0.6rem;
+}
+.yizhongjiangDiv p{
+	font-size: 0.24rem;
+	line-height: 0.33rem;
+}
+.colorfbe430{
+	color: #fbe430;
+}
+.colorffebce{
+	color:#ffebce;
+}
+.dadanNum{
+  display: inline-block;
+  padding:0 0.1rem;
+  font-size: 0.47rem;
+  color: #f7de50;
+}
+.duihuanBtn{
+  display: inline-block;
+  padding-left: 0.1rem;
+  font-size: 0.22rem;
+  color: #f3df59;
+}
+.zhongjiangbobaoWarp{
+  margin: 0.35rem auto;
+  width: 6.16rem;
+  height: 4.59rem;
+  border-radius: 13px;
+  background: url(../images/zhongjiang-info.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.zhongjiangbobaoDiv{
+  position: absolute;
+  top: 1.23rem;
+  left: 0.42rem;
+  width: 5.3rem;
+  height: 2.99rem;
+  border-radius: 0.11rem;
+  background: #B26AD2;
+  margin: 0 auto;
+}
+
+.zhongjiangbobaoDiv header{
+  position: relative;
+  margin: 0.18rem auto 0;
+  width: 3.4rem;
+  height: 0.3rem;
+}
+.fgx{
+  position: absolute;
+  top: 0.15rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #bf9767;
+}
+.bobaoTit{
+  position: relative;
+  margin:0 auto;
+  width: 1.4rem;
+  height: 0.3rem;
+  background: #ffedb7;
+  text-align: center;
+  font-size: 0.3rem;
+  color:#7f4118;
+  line-height: 0.3rem;
+}
+.zhongjiangbobaoBanner{
+  position: relative;
+  height: 2.99rem;
+  overflow: hidden;
+  border-radius:  0.11rem;
+}
+.zhongjiangUl>li,.miandan{
+  height: 0.55rem;
+  padding: 0 0.15rem;
+  font-size: 0.22rem;
+  line-height: 0.55rem;
+}
+.zhongjiangUl>li:nth-child(even){
+	background:#7554BD;
+}
+.miandan{
+	position: relative;
+	margin-top: 0.15rem;
+  font-weight: bold;
+  background: #fee5a0;
+}
+.zhongjiangPhone{
+	clear: both;
+  	color: #FFFFFF;
+}
+.zhongjiangjiangpin{
+  color: #FFFFFF;
+}
+.shareBtn,.goJindan{
+  margin: 0.4rem auto 0;
+  width: 5rem;
+  height: 0.8rem;
+  background: url('images/btn_bg1.png') no-repeat;
+  background-size: 5rem 0.8rem;
+  box-shadow: 0.1rem 0.05rem 0.29rem #e34007;
+  border-radius: 0.4rem;
+  font-size: 0.32rem;
+  color: #be262c;
+  line-height: 0.8rem;
+}
+.BottmBtnDiv{
+  margin: 0.4rem auto 0.8rem;
+  width: 5.1rem;
+  height: 0.8rem;
+}
+.BottomBtn{
+  width: 2.34rem;
+  height: 0.74rem;
+  line-height: 0.74rem;
+  font-size: 0.26rem;
+  color: #ffd74b;
+  border-radius: 0.4rem;
+  border:2px solid #ffd74b;
+}
+.moreBtn{
+	margin: 0.45rem auto 0.85rem;
+	width: 5.84rem;
+	height: 0.86rem;
+	background: url('../images/moreBtnbg.png');
+	background-size: 100% 100%;
+	font-size: 0.32rem;
+	color: #490f7f;
+	line-height: 0.86rem;
+	font-weight: bold;
+}
+
+.errorDiv{
+	margin: 0.25rem auto 0.4rem;
+	padding: 0.45rem 0.3rem;
+	width: 5.2rem;
+	height: 2.7rem;
+	text-align: left;
+	background: #3a116d;
+	border-radius: 8px;
+	font-size: 0.24rem;
+	color: #ffebce;
+	line-height: 0.3rem;
+	overflow: auto;
+}
+
+/*弹层部分*/
+.mc,.hdgzMc{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: #000;
+  opacity: 0.7;
+}
+.hdgzMc{
+	z-index: 200;
+}
+.hdgzTc{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.9rem;
+  margin-left: -2.55rem;
+  width: 5.1rem;
+  height: 6.08rem;
+  z-index: 250;
+}
+.hdgzClose,.tcCloseBtn,.jingpinTcClose{
+  position: absolute;
+  top: -1.15rem;
+  right: -0.1rem;
+  width: 0.57rem!important;
+  height: 0.57rem!important;
+  z-index: 10;
+	border:none!important;
+}
+.hdgzBg{
+  position: absolute;
+  top: 0;
+  left: -1px;
+	width: 5.1rem;
+  height: 6.08rem;
+  z-index: 3;
+}
+.hdgzHeader{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.28rem;
+  color: #fff;
+  border-radius:0.12rem 0.12rem 0 0;
+  z-index: 5;
+}
+.hdgzContent{
+  position: absolute;
+  top: 1.3rem;
+  left: 50%;
+	margin-left: -2.275rem;
+  z-index: 5;
+  width: 4.55rem;
+  height: 4.2rem;
+  overflow: hidden;
+  border-radius: 0 0 0.12rem 0.12rem;
+}
+.hdgzHideDiv{
+	height: 4.2rem;
+  padding-bottom: 0.1rem;
+  overflow: auto;
+}
+.hdgzUl{
+  padding: 0.1rem 0;
+  line-height: 0.3rem;
+  font-size: 0.22rem;
+  color: #666;
+  text-align: left;
+  overflow: auto;
+}
+
+.noGiftTc,.noJihuiDiv{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.05rem;
+  margin-left: -2.45rem;
+  width: 4.9rem;
+  height: 2.1rem;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 150;
+}
+
+.noJihuiDiv{
+	height: 2.5rem;
+	margin-top: -1.25rem;
+}
+.getGiftDiv{
+  height: 2.9rem;
+  margin-top: -1.45rem;
+}
+
+.selfTcClose{
+  right: -0.3rem;
+}
+.tcLogo{
+  position: absolute;
+  top: -0.43rem;
+  left: 50%;
+  margin-left: -0.43rem;
+  width: 0.86rem;
+  height: 0.86rem;
+}
+.tcTips1{
+  margin: 0.75rem auto 0;
+  width: 85%;
+  line-height: 0.3rem;
+  font-size: 0.24rem;
+  color: #666;
+}
+.tcTips1 p{
+	text-align: left;
+}
+.tcTip2{
+  margin-top: 0.1rem;
+  font-size: 0.24rem;
+  color: #ff7744;
+}
+.marginT40{
+  margin-top: 0.4rem;
+}
+.marginT38{
+  margin-top: 0.38rem;
+}
+.marginT30{
+  margin-top: 0.3rem;
+}
+.colorff7744{
+  color: #ff7744!important;
+}
+.color666{
+  color: #666!important;
+}
+.tcKnoweBtn{
+  width: 100%;
+  height: 0.7rem;
+  font-size: 0.28rem;
+  color: #ff7744;
+  line-height: 0.7rem;
+  border-top: 1px solid #eee;
+  border-radius: 5px;
+}
+.tcContent{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.moreActive{
+  width: 2.44rem;
+  color: #ff7744;
+}
+.noGiftTcCancel,.noJihuiCancel{
+  width: 2.44rem;
+  height: 100%;
+  color: #666;
+  border-right: 1px solid #eee;
+}
+.JingpinTc{
+	display: none;
+	position: fixed;
+	top: 0.5rem;
+	left: 50%;
+	z-index: 150;
+	margin-left: -2.65rem;
+	width: 5.3rem;
+}
+.jingpinTcClose{
+	right: -0.1rem;
+	top: 0.3rem;
+}
+.guangIcon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 5.3rem;
+	height: 5.3rem;
+	animation: myfirst 10s linear infinite;
+	-webkit-animation: myfirst 10s linear infinite;	/* Safari 和 Chrome */
+}
+@-webkit-keyframes myfirst {
+    0% {
+      -webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);;
+      transform: rotate(360deg);
+    }
+  }
+.jiangpinPic{
+	position: absolute;
+	top: 0.8rem;
+	left: 50%;
+	margin-left: -2.1rem;
+	z-index: 3;
+	width: 4.2rem;
+	height: 3.35rem;
+}
+.JiangpinTxt{
+	position: relative;
+	margin-top: 4.4rem;
+	width: 4.28rem;
+	left: 50%;
+	margin-left: -2.14rem;
+	z-index: 10;
+}
+.zhongjiangTit1{
+	margin-bottom: 0.25rem;
+	height: 0.36rem;
+	line-height: 0.36rem;
+	font-size: 0.36rem;
+	color: #fff;
+}
+.jingpinName,.zhongjiangTit2 a{
+	color: #fbd733;
+}
+.zhongjiangTit2 a{
+	text-decoration: underline;
+}
+.zhongjiangTit2{
+	width: 120%;
+  margin-left: -10%;
+	margin-bottom: 0.2rem;
+	font-size: 0.22rem;
+	line-height: 0.3rem;
+	color: #fff;
+}

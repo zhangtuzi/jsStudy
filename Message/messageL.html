@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>测试窗体</title>
+<style>
+body{min-width:0;}
+</style>
+</head>
+
+<body>
+<div id="message" class="p20">
+	接受的信息将在2秒后呈现。
+</div>
+<script>
+window.addEventListener('message', function(e) {
+	document.querySelector("#message").innerHTML = "接受到的信息是：" + e.data;
+}, false);
+window.addEventListener('message', function(e) {
+    var interval;
+    // 检测来源
+    if (e.origin == 'http://jsstudy.www.rabbitzhl.com/')
+        switch (e.data) {
+            case 'ready':
+                // e.source 为发送的 window 对象
+                interval = setTimeout(function(win) {
+                    win.postMessage(message,'http://jsstudy.www.rabbitzhl.com');
+                }, 2000, e.source);
+                break;
+
+            case 'closed':
+                clearInterval(interval);
+                break;
+    }
+ }, false);
+// // 当文档加载完毕, 给父级来源发送信息。
+// window.addEventListener('load', function(e){
+// 	e.currentTarget.opener.postMessage('ready', 'http://jsstudy.www.rabbitzhl.com/');
+// }, false);
+//
+// // 当窗体关闭，告诉父级窗体已经关闭了。
+// window.addEventListener('unload', function(e){
+// 	e.currentTarget.opener.postMessage('closed', 'http://jsstudy.www.rabbitzhl.com/');
+// }, false);
+</script>
+</body>
+</html>

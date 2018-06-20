@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.testUl{
+    width:100px;
+    height: 200px;
+}
+.dn{
+    display:none;
+}
+.testUl>li{
+    float: left;
+    width:48px;
+    height:48px;
+    border:1px solid #ccc;
+    background: blue;
+}
+.testUl>li img{
+    width: 100%;
+}
+.testUl>.red{
+    background: red;
+}
+
+.userMessageTable{
+    width: 300px;
+}
+.userMessageTable td{
+    border:1px solid #ccc;
+}

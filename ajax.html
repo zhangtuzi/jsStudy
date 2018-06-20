@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/xdomainrequest.js"></script>
+</head>
+<body>
+    <script>
+        jQuery.support.cors=true;
+        // $.getJSON('http://www.10010.com/net5/front/WT5/WT5_MENU_5_001/011/888/VERSION.json').done(function(data) {
+        //     console.log(data); 
+        //     alert(data);
+        // });
+
+        // POST
+        $.ajax({
+        url: 'http://www.10010.com/net5/front/WT5/WT5_MENU_5_001/011/888/VERSION.json',
+        contentType: 'text/plain',
+        type: 'GET',
+        dataType: 'json'
+        }).done(function(data) {
+            alert(data);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JsStudy1</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div class="cookieTest" id="cookieBtn" style="width:100px;height:20px;background:#ccc;color:#fff;margin:20px;">cookieTest</div>
+    <!-- <iframe src="http://www.rabbitzhl.com/PC5/ersanjiPage/et.html" width="" height=""></iframe> -->
+    <!-- <iframe src=""  name="iframe2"></iframe> -->
+    <script type="text/javascript">
+      // var study1=function(){
+      //   alert('study1');
+      // }
+      // study1();
+      // top.frames['iframe1'].style.background-Color='red';
+      
+      var iframe1=document.getElementById('iframe1');
+      function iFrameHeight() {
+        var ifm= document.getElementById("iframe1");
+        var subWeb = document.frames ? document.frames["iframe1"].document :
+        ifm.contentDocument;
+          if(ifm != null && subWeb != null) {
+            ifm.height = subWeb.body.scrollHeight;
+          }
+      }
+//document.getElementById('cookieBtn')
+
+      // iframe1.style.width='1000px';
+      // iframe1.style.height='1000px';
+      //
+      // var div1=document.getElementById('div1');
+      // console.log(div1.style)
+      // div1.style.width='100px';
+      // div1.style.height='100px';
+      // div1.style.borderWidth='1px';
+      // div1.style.borderStyle='solid';
+      // div1.style.borderColor='red';
+      // div1.style.backgroundColor='#000';
+      // div1.style.opacity='0.3';
+      // div1.style.filter='alpha(opacity=30)';
+
+      var cookieTest=document.querySelector('.cookieTest');
+      cookieTest.onclick=function(){
+        document.cookie='name=lishaoxiong';
+        document.cookie='age=35';
+        window.location.href='http://jsstudy.www.rabbitzhl.com/jsStudy2.html';
+      }
+    </script>
+  </body>
+</html>
